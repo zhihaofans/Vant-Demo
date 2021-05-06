@@ -8,6 +8,7 @@
           v-bind:icon="item.icon"
           v-bind:text="item.text"
           v-bind:to="item.to"
+          @click="loading"
         />
       </van-grid>
     </div>
@@ -38,6 +39,13 @@ export default {
   methods: {
     sorry() {
       Toast("暂无后续逻辑~");
+    },
+    loading() {
+      Toast.loading({
+        message: "加载中...",
+        forbidClick: true,
+        duration: 500,
+      });
     },
   },
 };
