@@ -6,7 +6,7 @@ Vue.use(Router);
 const routes = [
   {
     path: "*",
-    redirect: "/hello",
+    redirect: "/main",
   },
   {
     name: "user",
@@ -34,6 +34,13 @@ const routes = [
     component: () => import("./view/hello"),
     meta: {
       title: "Hello World",
+    },
+  },
+  {
+    name: "main",
+    component: () => import("./view/main"),
+    meta: {
+      title: "首页",
     },
   },
 ];
