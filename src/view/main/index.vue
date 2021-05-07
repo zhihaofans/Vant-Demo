@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <van-nav-bar title="标题" left-arrow />
+    <van-nav-bar title="首页" />
     <div class="main-grid">
       <van-grid>
         <van-grid-item
