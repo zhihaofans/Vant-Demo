@@ -1,10 +1,11 @@
 <template>
   <div class="main">
+    <van-nav-bar title="标题" left-arrow />
     <div class="main-grid">
       <van-grid>
         <van-grid-item
           v-for="item in grid.items"
-          v-bind:key="item"
+          v-bind:key="item.key"
           v-bind:icon="item.icon"
           v-bind:text="item.text"
           v-bind:to="item.to"
@@ -16,12 +17,13 @@
 </template>
 
 <script>
-import { Grid, GridItem, Toast } from "vant";
+import { Grid, GridItem, Toast, NavBar } from "vant";
 
 export default {
   components: {
     [Grid.name]: Grid,
     [GridItem.name]: GridItem,
+    [NavBar.name]: NavBar,
   },
 
   data() {

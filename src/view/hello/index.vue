@@ -4,7 +4,7 @@
       <van-cell
         is-link
         v-for="item in list.items"
-        v-bind:key="item"
+        v-bind:key="item.title"
         v-bind:title="item.title"
         v-bind:value="item.value"
         v-bind:to="item.to"
